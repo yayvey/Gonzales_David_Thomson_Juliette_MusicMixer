@@ -1,7 +1,98 @@
-.hidden {
-    display: none;
+@charset "utf-8";
+/* CSS Document */
+
+.hidden
+{
+	display:none;
 }
 
-img {
-    width: 300px;
+/*To get rid of that ugly blue opaque box when highlighting something.*/
+::selection 
+{
+	background-color: transparent;
+}
+
+
+/*Basic stylings*/
+body
+{
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(94, 94, 94));
+}
+
+p{
+	font-size: x-small;
+}
+
+/*Container where draggables can be stored.*/
+.container 
+{
+	width: 480px;
+	height: 80px;
+	padding: .5rem;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	text-align: center;
+	border-radius: 50px;
+	display: flex;
+}
+
+/*Restzone/Dropzone Stylings. White to grey gradient.*/
+#restZone 
+{
+	background: linear-gradient(to bottom, rgb(94, 94, 94), rgb(255, 255, 255))
+}
+
+#dropZone 
+{
+	background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(94, 94, 94));
+}
+
+/*Styling for draggables.*/
+.draggable 
+{
+	cursor: move;
+}
+
+.draggable.dragging {
+	opacity: .5;
+}
+
+/*Container/Class that holds background images.*/
+.imageContainer {
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+/*Styling for buttons*/
+button#switchButton{
+	background: linear-gradient(to right, rgb(94, 94, 94), rgb(255, 255, 255));
+	border-radius: 50px;
+	width: 80px;
+	height: 80px;
+}
+
+button#soundButton{
+	background: linear-gradient(to right, rgb(255, 255, 255), rgb(94, 94, 94));
+	border-radius: 50px;
+	width: 80px;
+	height: 80px;
+}
+
+/* Styling for images within buttons*/
+#sound{
+	width: 50px;
+	height: 50px;
+}
+
+#switch{
+	width: 50px;
+	height: 50px;
 }

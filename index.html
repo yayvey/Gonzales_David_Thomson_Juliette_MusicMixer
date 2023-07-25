@@ -1,20 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Music Mixer</title>
-        <link href="css/main.css" rel="stylesheet">        
-    </head>
-    <body>
-        <h1>Music Mixer</h1>
-        <img src="images/sample-city-background.jpeg" alt="City Background">
-        <img src="images/911.svg" alt="Emergency Services">
-        <img src="images/basketball.svg" alt="Basketball">
-        <img src="images/bicycle.svg" alt="Bicycle">
-        <img src="images/car.svg" alt="Car">
-        <img src="images/construction.svg" alt="Walking man">
-        <img src="images/pause_music_mix.svg" alt="Pause/Play">
-       <script src="js/main.js"></script> 
-    </body>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link href="css/grid.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<title>THE CAGE - Soundscape</title>
+</head>
+<body>
+    <!--Header introducing what the soundscape is about.-->
+    <header>
+        <h1 class="hidden">Header</h1>
+
+        <h2>
+            <a href="index.html"><img src="images/the-cage.svg" id="header" alt="The Cage"></a>
+        </h2>
+
+        <h3><i><b>Legendary West 4th St., Manhattan, New York Streetball Court, built in 1935</b></i></h5>
+
+    </header>
+
+<!-- Once upon a time, in a town called <main>...-->
+    <main>
+        <h1 class="hidden">Main</h1>
+
+        <p>Drag icons to bottom drop zone to initialize audio!</p>
+        <!-- There was a container that was restZone gang territory...-->
+        <section id="restZone" class="container">
+            <!-- Within the restZone gang were 6 multi-classed images looking for a way out of the life; and thanks to JavaScript, they have been given a chance.-->
+		    <img src="images/walking.png" class="walking draggable" draggable="true" alt="walking">
+			<img src="images/construction.png" class="construction draggable" draggable="true" alt="construction">
+			<img src="images/basketball.png" class="basketball draggable" draggable="true" alt="basketball">
+			<img src="images/bicycle.png" class="bicycle draggable" draggable="true" alt="bicycle">
+			<img src="images/traffic.png" class="traffic draggable" draggable="true" alt="traffic">
+			<img src="images/siren.png" class="siren draggable" draggable="true" alt="siren">
+	    </section>
+
+        <p>Press button to change image without refreshing page!</p>
+        <button id="switchButton"><img src="images/switch.png" id="switch" alt="Switch Image Button" draggable="false"></button>
+        
+        <!-- Container displaying the many iterations of backgrounds. "#" value because images are called in javascript.-->
+        <section class="imageContainer">
+            <img id="displayedImage" src="#" alt="Image" draggable="false">
+        </section>
+
+        <section id="dropZone" class="container">
+            <!-- This is the drag and drop area for the dropZone. ID will be used to track if there is a draggable image dragged inside the container.-->
+        </section>
+    
+
+        <p>Press button to play the audio of the chosen icons!</p>
+        <button id="soundButton"><img src="images/sound.png" id="sound" alt="Sound Button" draggable="false"></button>
+
+        <section id="audioZone" class="audioPlayer">
+            <!-- Audios stored here to be played. They are synced to the draggable icons by class. They are all politely being forced to loop for the rest of their life.-->
+            <audio src="includes/walking.mp3" class="walking" loop></audio>
+            <!--This sound was annoying on a loop, so I turned it off. Pressing play will restart it.-->
+            <audio src="includes/construction.mp3" class="construction"></audio>
+            <audio src="includes/basketball.mp3" class="basketball" loop></audio>
+            <audio src="includes/bicycle.mp3" class="bicycle" loop></audio>
+            <audio src="includes/halftime.mp3" class="traffic" loop></audio>
+            <audio src="includes/traffic.mp3" class="traffic" loop></audio>
+            <!--This sound was annoying on a loop, so I turned it off. Pressing play will restart it.-->
+            <audio src="includes/siren.mp3" class="siren"></audio>
+        </section>
+    </main>
+
+    <footer>
+        <!--Information of who worked on website, and where other content came from.-->
+        <h1 class="hidden">Footer</h1>
+        <br><br><br>
+        <p>Website by David Gonzales & Juliette Thomson. <br> Photography by Anthony Geathers, in series <i>Behold the Cag</i>(2021). Published by Redbull. <br> Music by Nasir Jones, from album <i>Illmatic</i>(1993). Published by Columbia Records.</p>
+    </footer>
+
+	<script src="js/main.js"></script>
+</body>
 </html>

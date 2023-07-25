@@ -1,10 +1,13 @@
-<!doctype html>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+
 <head>
-<meta charset="utf-8">
-	<link href="css/grid.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet" type="text/css">
-	<title>THE CAGE - Soundscape</title>
+    <meta charset="utf-8">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>THE CAGE - Soundscape</title>
 </head>
 <body>
     <!--Header introducing what the soundscape is about.-->
@@ -15,17 +18,18 @@
             <a href="index.html"><img src="images/the-cage.svg" id="header" alt="The Cage"></a>
         </h2>
 
-        <h3><i><b>Legendary West 4th St., Manhattan, New York Streetball Court, built in 1935</b></i></h5>
+        <h3><i><b>Legendary West 4th St., Manhattan, New York Streetball Court, built in 1935</b></i></h3>
 
     </header>
 
-<!-- Once upon a time, in a town called <main>...-->
+    <!-- Once upon a time, in a town called <main>...-->
     <main>
-        <h1 class="hidden">Main</h1>
+        <h2 class="hidden">Main</h2>
 
         <p>Drag icons to bottom drop zone to initialize audio!</p>
         <!-- There was a container that was restZone gang territory...-->
         <section id="restZone" class="container">
+            <h4 class="hidden">Rest Zone</h4>
             <!-- Within the restZone gang were 6 multi-classed images looking for a way out of the life; and thanks to JavaScript, they have been given a chance.-->
 		    <img src="images/walking.png" class="walking draggable" draggable="true" alt="walking">
 			<img src="images/construction.png" class="construction draggable" draggable="true" alt="construction">
@@ -40,10 +44,12 @@
         
         <!-- Container displaying the many iterations of backgrounds. "#" value because images are called in javascript.-->
         <section class="imageContainer">
+            <h4 class="hidden"> Images of The Cage</h4>
             <img id="displayedImage" src="#" alt="Image" draggable="false">
         </section>
 
         <section id="dropZone" class="container">
+            <h4 class="hidden">Drop Zone</h4>
             <!-- This is the drag and drop area for the dropZone. ID will be used to track if there is a draggable image dragged inside the container.-->
         </section>
     
@@ -52,6 +58,7 @@
         <button id="soundButton"><img src="images/sound.png" id="sound" alt="Sound Button" draggable="false"></button>
 
         <section id="audioZone" class="audioPlayer">
+            <h4 class="hidden">Audios</h4>
             <!-- Audios stored here to be played. They are synced to the draggable icons by class. They are all politely being forced to loop for the rest of their life.-->
             <audio src="includes/walking.mp3" class="walking" loop></audio>
             <!--This sound was annoying on a loop, so I turned it off. Pressing play will restart it.-->
@@ -67,7 +74,7 @@
 
     <footer>
         <!--Information of who worked on website, and where other content came from.-->
-        <h1 class="hidden">Footer</h1>
+        <h4 class="hidden">Footer</h4>
         <br><br><br>
         <p>Website by David Gonzales & Juliette Thomson. <br> Photography by Anthony Geathers, in series <i>Behold the Cag</i>(2021). Published by Redbull. <br> Music by Nasir Jones, from album <i>Illmatic</i>(1993). Published by Columbia Records.</p>
     </footer>
